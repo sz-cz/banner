@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.banner {
+    width: 728px;
+    height: 90px;
+    background-color: navy;
+    background-image: url(./image1.jpg);
+    background-size: cover;
+    background-position-y: 250px;
+    background-position-x: center;
+    overflow: hidden;
+    position: relative;
+    background-blend-mode: hard-light;
+    transition: 1s;
+}
+
+.banner:hover {
+    background-color: red;
+}
+
+.banner__word {
+    font-family: "Arial Black";
+    font-weight: 900;
+    font-size: 68px;
+    text-transform: uppercase;
+    color: red;
+    mix-blend-mode:difference;
+    position: absolute;
+    bottom: 170px;
+    left: 20px;
+    animation-name: fall-down;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    text-shadow: white -2px 2px 1px;
+}
+
+.word2 {
+    animation-delay: 2s;
+}
+
+.word3 {
+    animation-delay: 4s;
+}
+
+.banner__element {
+    height: 300px;
+    width: 600px;
+    transform: rotate(15deg);
+    background-color: royalblue;
+    border: 3px blue;
+    position: absolute;
+    right: -400px;
+    top: -70px;
+    transition: .2s;
+}
+
+.banner__element:hover {
+    right: -50px;
+}
+
+.banner__element:hover .element__text {
+    left: 25%;
+    top: 51%;
+}
+
+.banner__element:hover .text-to-hide {
+    display: none;
+}
+
+.banner__element:hover .hidden-text {
+    display: block;
+}
+
+.element__text {
+    font-family: Lato;
+    color: white;
+    position: absolute;
+    top: 56%;
+    left: 16%;
+    transform: translate(-50%,-50%) rotate(-15deg);
+}
+
+.text__heading {
+    font-size: 20px;
+}
+
+.hidden-text {
+    display: none;
+}
+
+.element__button {
+    position: absolute;
+    top: 27%;
+    left: 70%;
+    transform: translate(-50%,-50%) rotate(-15deg);
+    padding: 8px 32px;
+    background-color: white;
+    font-size: 20px;
+    color: navy;
+    border: none;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.element__button::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: royalblue;
+    position: absolute;
+    transform: translate(50%,-50%);
+    right: 0px;
+    top: 0px;
+    transition: .3s;
+    z-index: -1;
+}
+
+.element__button:hover {
+    color: white;
+    border: 2px white solid;
+}
+
+.element__button:hover::after {
+    width: 285px;
+    height: 285px;
+}
+
+@keyframes fall-down {
+    5% {bottom: 0px;}
+    8% {bottom: 6px;}
+    11% {bottom: 0px;}
+    13% {bottom: 4px;}
+    15% {bottom: 0px;}
+    33% {bottom: 0px; opacity: 100%;}
+    34% {opacity: 0;}
+}

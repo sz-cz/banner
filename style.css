@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.portfolio__description {
+    padding: 30px 550px;
+    font-family: sans-serif;
+    background-color: #333;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.portfolio-element {
+    padding: 30px 420px;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio-element:nth-child(even) {
+    background-color: #fbfbfb;
+}
+
+.portfolio-element:last-child {
+    padding-bottom: 100px;
+}
+
+.portfolio-element__heading {
+    margin-bottom: 20px;
+}
+
+.portfolio-element__description {
+    margin-bottom: 30px;
+    width: 700px;
+}
